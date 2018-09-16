@@ -1,8 +1,34 @@
 <body>
-<h1>Hello World</h1>
+<h1>EIT Tracking App</h1>
+
+<div class='container'>
+	<div class="row">
+		<form id="data-capture">
+			<div class="form-group">
+				<label>Firstname</label>
+				<input type="text" name="Firstname" class='form-control'>
+			</div>
+			<div class="form-group">
+				<label>Lastname</label>
+				<input type="text" name="Lastname" class='form-control'>
+			</div>
+			<div class="form-group">
+				<label>Gender</label>
+				<input type="radio" name="Gender" value="Female">female
+				<input type="radio" name="Gender" value="Male">Male
+			</div>
+			<div class="form-group">
+				<label>DOB</label>
+				<input type="date" name="DateofBirth" class="form-control">
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
+</div>
 
 <table class = 'table'>
-	<tr>
+	<tr class = 'header1'>
+		<th></th>
 		<th> First name </th>
 		<th> Last name </th>
 		<th> Gender </th>
@@ -11,5 +37,6 @@
 	{{> eitList}}	
 </table>
 
+ 
 </body>
 

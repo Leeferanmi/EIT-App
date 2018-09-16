@@ -1,4 +1,5 @@
 import './eit_list.html'
+import {Eits} from '../../api/eits.js'
 var eitData = [
 {
 	Firstname: "Feranmi",
@@ -21,5 +22,5 @@ var eitData = [
 ]
 
 Template.eitList.helpers({
-	eits:eitData
+	eits:Eits.find()
 })
