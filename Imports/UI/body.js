@@ -12,12 +12,7 @@ Template.body.events({
 		var Gender = target.Gender.value
 		var DOB = target.DateofBirth.value.split("-")
 		var DateofBirth = new Date(Number(DOB[0]),Number(DOB[1])-1,Number(DOB[2]))
-
-		Eits.insert({
-			Firstname:Firstname,
-			Lastname:Lastname,
-			Gender:Gender,
-			DOB:DateofBirth
-		})
+		
+		Meteor.call('eits.insert',Firstname, Lastname, Gender, DateofBirth)
 	}
 })
