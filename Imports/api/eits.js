@@ -17,5 +17,9 @@ Meteor.methods({
 		Gender:Gender,
 		DOB:DOB
 	})
+	},
+	'eits.delete'(id){
+		check(id, String);
+		Eits.remove(id);
 	}
 })

@@ -1,8 +1,10 @@
 <body>
 <h1>EIT Tracking App</h1>
 
+{{> loginButtons}}
 <div class='container'>
 	<div class="row">
+		{{#if currentUser}}
 		<form id="data-capture">
 			<div class="form-group">
 				<label>Firstname</label>
@@ -23,6 +25,7 @@
 			</div>
 			<button type="submit" class="btn btn-default">Submit</button>
 		</form>
+		{{/if}}
 	</div>
 </div>
 
@@ -36,7 +39,8 @@
 	</tr>
 	{{> eitList}}	
 </table>
-
- 
+{{#if currentUser}}
+	<button class="btn btn-sml btn-danger" id='delete-eit'>Delete</button>
+{{/if}}
 </body>
 
