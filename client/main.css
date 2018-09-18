@@ -1,19 +1,25 @@
 body {
 	background-image: url('https://images.unsplash.com/photo-1515595967223-f9fa59af5a3b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7e566375b2726c8e162957886571e361&auto=format&fit=crop&w=634&q=80');
 	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	text-align: center;
 	font-family: Goudy Old Style;
 	font-size: 22px;
 	font-color: #aabc7e;
 }
 .table {
-	color: #333926;
+	color: #9aa971;
 }
 .header1 {
-	color: white;
+	color: #d16014;
 }
 h1 {
-	color: white;
+	color: #d16014;
 }
 .form-group {
 	background-color: #aabc7e;
+}
+th {
+text-align: center;	
 }
