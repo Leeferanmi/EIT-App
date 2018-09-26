@@ -22,9 +22,14 @@ Template.body.events({
 		var Lastname = target.Lastname.value
 		var Gender = target.Gender.value
 		var DOB = target.DateofBirth.value.split("-")
-		var DateofBirth = new Date(Number(DOB[0]),Number(DOB[1])-1,Number(DOB[2]))
-		
-		Meteor.call('eits.insert',Firstname, Lastname, Gender, DateofBirth)
+		var DateofBirth = new Date(Number(DOB[0]),Number(DOB[1])-1,Number(DOB[2]));
+		var id = target.id.value;
+			if (id){
+				Meteor.call('eits.update',id, Firstname, Lastname, Gender, DateofBirth);
+			}
+			else {
+				Meteor.call('eits.insert',Firstname, Lastname, Gender, DateofBirth);
+			}
 	},
 	'change .checkedValue'(event, instance){
 		// var getAll = instance.state.get('theArray')
